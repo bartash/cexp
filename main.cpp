@@ -1,23 +1,24 @@
 #include <iostream>
 
+using namespace std;
+
 std::string foo(string str)
 {
-   printf("foo:str %s is at %x", str, &str);
+    cout << "foo:str '" << str << "' is at " << &str << endl;
 }
 
 std::string bar(string* str)
 {
-   printf("bar:str %s is at %x", *str, str);
+    cout << "bar:str '" << *str << "' is at " << str << endl;
 }
 
 int main() {
-    using namespace std;
+
     
    string hello1 = "Hello, World!";
    cout << hello1 <<endl;
 
-   printf("hello1 is at %x", &hello1);
-   printf("main:str %s is at %x", hello1, &hello1);
+    cout << "main:str '" << hello1 << "' is at " << &hello1 << endl;
     foo(hello1);
     bar(&hello1);
 
